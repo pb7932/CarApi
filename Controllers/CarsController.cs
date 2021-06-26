@@ -15,6 +15,8 @@ namespace CarApi.Controllers
         {
             _repository = repositroy;
         }
+
+        [HttpGet]
         public ActionResult<IEnumerable<Car>> GetAllCars()
         {
             var cars = _repository.GetAllCars();
@@ -25,6 +27,19 @@ namespace CarApi.Controllers
             }
 
             return Ok(cars);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Car> GetCarById(int id)
+        {
+            var car = _repository.GetCarById(id);
+
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(car);
         }
     }
 }

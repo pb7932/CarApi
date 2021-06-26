@@ -19,7 +19,7 @@ namespace CarApi.Repo
 
         public Car GetCarById(int id)
         {
-            return new Car { Id = 0, name = "bmw", price = 200000, power = 100 };
+            return new Car { Id = id, name = "bmw", price = 0, power = 0 };
         }
     }
 }
