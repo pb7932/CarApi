@@ -5,6 +5,16 @@ namespace CarApi.Repo
 {
     public class MockCarRepo : ICarRepo
     {
+        public void CreateCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Car> GetAllCars()
         {
             var cars = new List<Car>
@@ -20,6 +30,11 @@ namespace CarApi.Repo
         public Car GetCarById(int id)
         {
             return new Car { Id = id, name = "bmw", price = 0, power = 0 };
+        }
+
+        public void UpdateCar(Car car)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
