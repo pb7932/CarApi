@@ -55,9 +55,17 @@ namespace CarApi.Repo
             {
                 throw new ArgumentNullException(nameof(car));
             }
-            var carModel = car;
+            var carModel = _context.Cars.FirstOrDefault(c => c.Id == car.Id);
 
-            _context.Cars.Update(carModel);
+            if (carModel == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            carModel.name = car.name;
+            carModel.price = car.price;
+            carModel.power = car.power;
+
             _context.SaveChanges();
         }
     }

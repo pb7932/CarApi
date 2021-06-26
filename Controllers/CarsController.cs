@@ -29,7 +29,7 @@ namespace CarApi.Controllers
             return Ok(cars);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetCarById")]
         public ActionResult<Car> GetCarById(int id)
         {
             var car = _repository.GetCarById(id);
@@ -40,6 +40,46 @@ namespace CarApi.Controllers
             }
 
             return Ok(car);
+        }
+
+        [HttpPost]
+        public ActionResult CreateCar(Car car)
+        {
+            _repository.CreateCar(car);
+
+            return CreatedAtRoute(nameof(GetCarById), new { id = car.Id }, car);
+        }
+
+        [HttpPut]
+        [Route("{id}")]
+        public ActionResult UpdateCar(int id, Car car)
+        {
+            var carFromRepo = _repository.GetCarById(id);
+
+            if (carFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            _repository.UpdateCar(car);
+
+            return NoContent();
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public ActionResult DeleteCar(int id)
+        {
+            var carFromRepo = _repository.GetCarById(id);
+
+            if (carFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            _repository.DeleteCar(carFromRepo);
+
+            return NoContent();
         }
     }
 }
