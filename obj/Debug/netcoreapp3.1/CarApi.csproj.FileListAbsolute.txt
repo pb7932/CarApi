@@ -42,3 +42,5 @@ C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

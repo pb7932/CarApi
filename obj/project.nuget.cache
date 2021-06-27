@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "f4GX2aSxOrQo00k0ZoSUCk1bDsCCjpg3iD3/e7fNcP5CmtnLQz495sRZBG4ZiSE8xmI6iWmXTM25dBwBN3LpzQ==",
+  "dgSpecHash": "JM/1Ubz9dWIcEU0hZLJUk12Oqzsc8FzMwYtKjKB5iM5aaUPX3GIQNuCfeB98K8H9T38ldsEJfSIQRidlHyww7Q==",
   "success": true,
   "projectFilePath": "C:\\WebDev\\projects\\dotnet-core\\CarApi\\CarApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pebe1\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\pebe1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\pebe1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\pebe1\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.7\\microsoft.aspnetcore.jsonpatch.5.0.7.nupkg.sha512",
+    "C:\\Users\\pebe1\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.0\\microsoft.aspnetcore.jsonpatch.3.1.0.nupkg.sha512",
     "C:\\Users\\pebe1\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.0\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.0.nupkg.sha512",
     "C:\\Users\\pebe1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\pebe1\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.7\\microsoft.entityframeworkcore.5.0.7.nupkg.sha512",

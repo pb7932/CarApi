@@ -36,5 +36,10 @@ namespace CarApi.Repo
         {
             throw new System.NotImplementedException();
         }
+
+        public bool VerifyUniqueName(string name)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

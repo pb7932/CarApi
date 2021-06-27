@@ -10,5 +10,7 @@ namespace CarApi.Repo
         void CreateCar(Car car);
         void UpdateCar(Car car);
         void DeleteCar(Car car);
+
+        bool VerifyUniqueName(string name);
     }
 }

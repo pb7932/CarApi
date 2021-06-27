@@ -68,5 +68,18 @@ namespace CarApi.Repo
 
             _context.SaveChanges();
         }
+
+        public bool VerifyUniqueName(string name)
+        {
+            return false;
+            var carWithName = _context.Cars.FirstOrDefault(c => c.name == name);
+
+            if (carWithName == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

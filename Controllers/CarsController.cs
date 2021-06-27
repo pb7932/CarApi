@@ -4,13 +4,14 @@ using CarApi.Repo;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using CarApi.Dtos;
-using Microsoft.AspNetCore.JsonPatch;
+using System;
+using System.Text;
 
 namespace CarApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CarsController : ControllerBase
+    public class CarsController : Controller
     {
         private readonly ICarRepo _repository;
         private readonly IMapper _mapper;
@@ -92,6 +93,18 @@ namespace CarApi.Controllers
             _repository.DeleteCar(carFromRepo);
 
             return NoContent();
+        }
+
+        [Route("verify", Name = "VerifyUniqueName")]
+        [AcceptVerbs("GET", "POST", "PUT")]
+        public ActionResult VerifyUniqueName(string name)
+        {
+            if (!_repository.VerifyUniqueName(name))
+            {
+                return Json(false);
+            }
+
+            return Json(true);
         }
     }
 }
