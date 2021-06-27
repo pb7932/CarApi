@@ -38,3 +38,7 @@ C:\WebDev\projects\dotnet-core\CarApi\obj\Debug\netcoreapp3.1\staticwebassets\Ca
 C:\WebDev\projects\dotnet-core\CarApi\obj\Debug\netcoreapp3.1\CarApi.dll
 C:\WebDev\projects\dotnet-core\CarApi\obj\Debug\netcoreapp3.1\CarApi.pdb
 C:\WebDev\projects\dotnet-core\CarApi\obj\Debug\netcoreapp3.1\CarApi.genruntimeconfig.cache
+C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\WebDev\projects\dotnet-core\CarApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 
 namespace CarApi
 {
@@ -30,6 +31,8 @@ namespace CarApi
             services.AddDbContext<CarContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<ICarRepo, PgsqlCarRepo>();
         }

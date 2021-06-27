@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using CarApi.Models;
 using CarApi.Repo;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using CarApi.Dtos;
 
 namespace CarApi.Controllers
 {
@@ -10,10 +12,12 @@ namespace CarApi.Controllers
     public class CarsController : ControllerBase
     {
         private readonly ICarRepo _repository;
+        private readonly IMapper _mapper;
 
-        public CarsController(ICarRepo repositroy)
+        public CarsController(ICarRepo repositroy, IMapper mapper)
         {
             _repository = repositroy;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -26,11 +30,11 @@ namespace CarApi.Controllers
                 return NotFound();
             }
 
-            return Ok(cars);
+            return Ok(_mapper.Map<IEnumerable<CarReadDto>>(cars));
         }
 
         [HttpGet("{id}", Name = "GetCarById")]
-        public ActionResult<Car> GetCarById(int id)
+        public ActionResult<CarReadDto> GetCarById(int id)
         {
             var car = _repository.GetCarById(id);
 
@@ -39,7 +43,9 @@ namespace CarApi.Controllers
                 return NotFound();
             }
 
-            return Ok(car);
+            var carReadDto = _mapper.Map<CarReadDto>(car);
+
+            return Ok(carReadDto);
         }
 
         [HttpPost]
