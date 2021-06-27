@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using CarApi.Validators;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarApi.Models
@@ -14,6 +15,7 @@ namespace CarApi.Models
         [Remote(action: "VerifyUniqueName", controller: "Cars")]
         public string name { get; set; }
 
+        [PriceRangeValidator(200)]
         public int price { get; set; }
 
         [Required]

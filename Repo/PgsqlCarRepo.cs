@@ -71,7 +71,6 @@ namespace CarApi.Repo
 
         public bool VerifyUniqueName(string name)
         {
-            return false;
             var carWithName = _context.Cars.FirstOrDefault(c => c.name == name);
 
             if (carWithName == null)

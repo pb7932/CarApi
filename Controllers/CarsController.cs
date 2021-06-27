@@ -95,9 +95,9 @@ namespace CarApi.Controllers
             return NoContent();
         }
 
-        [Route("verify", Name = "VerifyUniqueName")]
+        [Route("verify")]
         [AcceptVerbs("GET", "POST", "PUT")]
-        public ActionResult VerifyUniqueName(string name)
+        public IActionResult VerifyUniqueName(string name)
         {
             if (!_repository.VerifyUniqueName(name))
             {
