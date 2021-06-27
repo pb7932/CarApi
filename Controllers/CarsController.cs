@@ -49,16 +49,19 @@ namespace CarApi.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateCar(Car car)
+        public ActionResult<CarReadDto> CreateCar(CarCreateDto carCreateDto)
         {
-            _repository.CreateCar(car);
+            var carModel = _mapper.Map<Car>(carCreateDto);
+            _repository.CreateCar(carModel);
 
-            return CreatedAtRoute(nameof(GetCarById), new { id = car.Id }, car);
+            var carReadDto = _mapper.Map<CarReadDto>(carModel);
+
+            return CreatedAtRoute(nameof(GetCarById), new { id = carReadDto.Id }, carReadDto);
         }
 
         [HttpPut]
         [Route("{id}")]
-        public ActionResult UpdateCar(int id, Car car)
+        public ActionResult UpdateCar(int id, CarUpdateDto carUpdateDto)
         {
             var carFromRepo = _repository.GetCarById(id);
 
@@ -67,7 +70,9 @@ namespace CarApi.Controllers
                 return NotFound();
             }
 
-            _repository.UpdateCar(car);
+            _mapper.Map(carUpdateDto, carFromRepo);
+
+            _repository.UpdateCar(carFromRepo);
 
             return NoContent();
         }

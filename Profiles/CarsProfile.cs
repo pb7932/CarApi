@@ -9,6 +9,9 @@ namespace CarApi.Profiles
         public CarsProfile()
         {
             CreateMap<Car, CarReadDto>();
+            CreateMap<CarCreateDto, Car>();
+            CreateMap<CarUpdateDto, Car>();
+            CreateMap<Car, CarUpdateDto>();
         }
     }
 }
